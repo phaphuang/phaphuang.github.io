@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniwat Phaphuangwittayakul - Lecturer, AI Researcher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="nav-sidebar">
+            <div class="nav-header">
+                <h3>Navigation</h3>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#ai-demos" class="nav-link">AI Demos</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section id="home" class="hero-section">
+                <div class="hero-content">
+                    <div class="profile-section">
+                        <div class="profile-image">
+                            <img src="./profile.png" alt="Aniwat Phaphuangwittayakul" />
+                            <div class="ai-pulse"></div>
+                        </div>
+                        <div class="profile-info">
+                            <h1 class="name">Aniwat Phaphuangwittayakul</h1>
+                            <p class="title">D.Eng., Lecturer</p>
+                            <p class="affiliation">International College of Digital Innovation<br>Chiang Mai University</p>
+                            
+                            <!-- AI Research Focus Visualization -->
+                            <div class="research-focus">
+                                <h3>Research Focus</h3>
+                                <div class="focus-tags">
+                                    <span class="tag ai-tag" data-field="cv">Computer Vision</span>
+                                    <span class="tag ai-tag" data-field="net">Complex Network</span>
+                                    <span class="tag ai-tag" data-field="kd">Knowledge Discovery</span>
+                                    <span class="tag ai-tag" data-field="gen">Generative Models</span>
+                                    <span class="tag ai-tag" data-field="fsl">Few-Shot Learning</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="section">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>D.Eng. (Computer Science and Technology)</h3>
+                            <p class="institution">East China University of Science and Technology (ECUST)</p>
+                            <p class="year">2023</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>M.S. (Control Science and Engineering)</h3>
+                            <p class="institution">Beijing Institute of Technology (BIT)</p>
+                            <p class="year">2017</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>B.Sc. (Computer Engineering)</h3>
+                            <p class="institution">Chiang Mai University</p>
+                            <p class="year">2012</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Interests -->
+            <section id="research" class="section">
+                <h2>Research Interests</h2>
+                <div class="research-grid">
+                    <div class="research-card" data-research="cv">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Computer Vision</h3>
+                        <p>Image processing, object detection, and visual recognition</p>
+                    </div>
+                    <div class="research-card" data-research="complex-networks">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                        <h3>Complex Network</h3>
+                        <p>Interconnected systems with nodes and edges showing emergent behaviors</p>
+                    </div>
+                    <div class="research-card" data-research="knowledge-discovery">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-vials"></i>
+                        </div>
+                        <h3>Knowledge Discovery</h3>
+                        <p>Process of extracting useful insights from large datasets</p>
+                    </div>
+                    <div class="research-card" data-research="gen">
+                        <div class="card-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Generative Models</h3>
+                        <p>GANs, VAEs, and other generative AI architectures</p>
+                    </div>
+                    <div class="research-card" data-research="fsl">
+                        <div class="card-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>Few-Shot Learning</h3>
+                        <p>Learning from limited data and meta-learning approaches</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Publications -->
+            <section id="publications" class="section">
+                <h2>Publications</h2>
+                <div class="publication-filters">
+                    <button class="filter-btn active" data-year="all">All Years</button>
+                    <button class="filter-btn" data-year="2024">2024</button>
+                    <button class="filter-btn" data-year="2023">2023</button>
+                    <button class="filter-btn" data-year="2022">2022</button>
+                    <button class="filter-btn" data-year="2021">2021</button>
+                    <button class="filter-btn" data-year="2020">2020</button>
+                    <button class="filter-btn" data-year="2018-2019">2018-2019</button>
+                </div>
+                <div class="publications-list">
+                    <!-- 2024 Publications -->
+                    <div class="publication-item" data-year="2024">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3>RailTrack-DaViT: A Vision Transformer-Based Approach for Automated Railway Track Defect Detection</h3>
+                            <p class="authors">Phaphuangwittayakul A.; Harnpornchai N.; Ying F.; Zhang J.</p>
+                            <p class="venue">Journal of Imaging</p>
+                            <p class="citations">📚 3 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Computer Vision</span>
+                                <span class="tag">Transformers</span>
+                                <span class="tag">Railway Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2024">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <h3>Augmented Reality-Enabled IoT Devices for Wireless Communication</h3>
+                            <p class="authors">Ramasamy S.S.; Chokkanathan K.; Phaphuangwittayakul A.; Vijayalakshmi S.</p>
+                            <p class="venue">Bio-Inspired Computational Paradigms: Security and Privacy in Dynamic Smart Networks</p>
+                            <div class="pub-tags">
+                                <span class="tag">AR/VR</span>
+                                <span class="tag">IoT</span>
+                                <span class="tag">Wireless Communication</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2023 Publications -->
+                    <div class="publication-item" data-year="2023">
+                        <div class="pub-year">2023</div>
+                        <div class="pub-content">
+                            <h3>Few-shot image generation based on contrastive meta-learning generative adversarial network</h3>
+                            <p class="authors">Phaphuangwittayakul A.; Ying F.; Guo Y.; Zhou L.; Chakpitak N.</p>
+                            <p class="venue">Visual Computer</p>
+                            <p class="citations">📚 14 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Few-Shot Learning</span>
+                                <span class="tag">GANs</span>
+                                <span class="tag">Meta-Learning</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2023">
+                        <div class="pub-year">2023</div>
+                        <div class="pub-content">
+                            <h3>Adaptive adversarial prototyping network for few-shot prototypical translation</h3>
+                            <p class="authors">Phaphuangwittayakul A.; Ying F.; Guo Y.; Guohui; Santisookrat S.</p>
+                            <p class="venue">Journal of Visual Communication and Image Representation</p>
+                            <div class="pub-tags">
+                                <span class="tag">Few-Shot Learning</span>
+                                <span class="tag">Prototypical Networks</span>
+                                <span class="tag">Translation</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2022 Publications -->
+                    <div class="publication-item" data-year="2022">
+                        <div class="pub-year">2022</div>
+                        <div class="pub-content">
+                            <h3>An optimal deep learning framework for multi-type hemorrhagic lesions detection and quantification in head CT images for traumatic brain injury</h3>
+                            <p class="authors">Phaphuangwittayakul A.; Guo Y.; Ying F.; Dawod A.Y.; Angkurawaranon S.; Angkurawaranon C.</p>
+                            <p class="venue">Applied Intelligence</p>
+                            <p class="citations">📚 46 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Deep Learning</span>
+                                <span class="tag">Medical Imaging</span>
+                                <span class="tag">Computer Vision</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2022">
+                        <div class="pub-year">2022</div>
+                        <div class="pub-content">
+                            <h3>Fast Adaptive Meta-Learning for Few-Shot Image Generation</h3>
+                            <p class="authors">Phaphuangwittayakul A.; Guo Y.; Ying F.</p>
+                            <p class="venue">IEEE Transactions on Multimedia</p>
+                            <p class="citations">📚 33 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Meta-Learning</span>
+                                <span class="tag">Few-Shot Learning</span>
+                                <span class="tag">Image Generation</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2022">
+                        <div class="pub-year">2022</div>
+                        <div class="pub-content">
+                            <h3>A hybrid method for traumatic brain injury lesion segmentation</h3>
+                            <p class="authors">Dawod A.Y.; Phaphuangwittayakul A.; Angkurawaranon S.</p>
+                            <p class="venue">International Journal of Electrical and Computer Engineering</p>
+                            <div class="pub-tags">
+                                <span class="tag">Medical Imaging</span>
+                                <span class="tag">Segmentation</span>
+                                <span class="tag">Brain Injury</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2021 Publications -->
+                    <div class="publication-item" data-year="2021">
+                        <div class="pub-year">2021</div>
+                        <div class="pub-content">
+                            <h3>SELF-ATTENTION RECURRENT SUMMARIZATION NETWORK WITH REINFORCEMENT LEARNING FOR VIDEO SUMMARIZATION TASK</h3>
+                            <p class="authors">Phaphuangwittayakul A.; Guo Y.; Ying F.; Xu W.; Zheng Z.</p>
+                            <p class="venue">Proceedings - IEEE International Conference on Multimedia and Expo</p>
+                            <p class="citations">📚 17 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Video Summarization</span>
+                                <span class="tag">Reinforcement Learning</span>
+                                <span class="tag">Self-Attention</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2021">
+                        <div class="pub-year">2021</div>
+                        <div class="pub-content">
+                            <h3>Adaptive slices in brain haemorrhage segmentation based on the slic algorithm</h3>
+                            <p class="authors">Dawod A.Y.; Phaphuangwittayakul A.; Ying F.; Angkurawaranon S.</p>
+                            <p class="venue">Engineering Letters</p>
+                            <p class="citations">📚 5 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Medical Imaging</span>
+                                <span class="tag">Segmentation</span>
+                                <span class="tag">SLIC Algorithm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2021">
+                        <div class="pub-year">2021</div>
+                        <div class="pub-content">
+                            <h3>Adaptive Image Segmentation for Traumatic Brain Haemorrhage</h3>
+                            <p class="authors">Dawod A.Y.; Phaphuangwittayakul A.</p>
+                            <p class="venue">TEM Journal</p>
+                            <p class="citations">📚 2 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Medical Imaging</span>
+                                <span class="tag">Segmentation</span>
+                                <span class="tag">Brain Hemorrhage</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2021">
+                        <div class="pub-year">2021</div>
+                        <div class="pub-content">
+                            <h3>Preliminary study and implementation of chiang mai tourism platform based on dosa</h3>
+                            <p class="authors">Panpeng V.; Fang M.; Phaphuangwittayakul A.; Rattanadamrongaksorn T.</p>
+                            <p class="venue">Advances in Intelligent Systems and Computing</p>
+                            <p class="citations">📚 5 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Tourism Platform</span>
+                                <span class="tag">DOSA</span>
+                                <span class="tag">Smart Tourism</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2020 Publications -->
+                    <div class="publication-item" data-year="2020">
+                        <div class="pub-year">2020</div>
+                        <div class="pub-content">
+                            <h3>Extracting Skeleton of the Global Terrorism Network Based on m-Modified Topology Potential</h3>
+                            <p class="authors">Wang S.; Malang K.; Yuan H.; Phaphuangwittayakul A.; Lv Y.; Lowdermilk M.D.; Geng J.</p>
+                            <p class="venue">Complexity</p>
+                            <p class="citations">📚 4 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Complex Networks</span>
+                                <span class="tag">Topology</span>
+                                <span class="tag">Network Analysis</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2020">
+                        <div class="pub-year">2020</div>
+                        <div class="pub-content">
+                            <h3>Identifying influential nodes of global terrorism network: A comparison for skeleton network extraction</h3>
+                            <p class="authors">Malang K.; Wang S.; Phaphuangwittayakul A.; Lv Y.; Yuan H.; Zhang X.</p>
+                            <p class="venue">Physica A: Statistical Mechanics and its Applications</p>
+                            <p class="citations">📚 17 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Complex Networks</span>
+                                <span class="tag">Network Analysis</span>
+                                <span class="tag">Influential Nodes</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2020">
+                        <div class="pub-year">2020</div>
+                        <div class="pub-content">
+                            <h3>Skeleton network extraction and analysis on bicycle sharing networks</h3>
+                            <p class="authors">Malang K.; Wang S.; Lv Y.; Phaphuangwittayakul A.</p>
+                            <p class="venue">International Journal of Data Warehousing and Mining</p>
+                            <p class="citations">📚 4 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Network Analysis</span>
+                                <span class="tag">Bicycle Sharing</span>
+                                <span class="tag">Data Mining</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2018-2019 Publications -->
+                    <div class="publication-item" data-year="2018-2019">
+                        <div class="pub-year">2019</div>
+                        <div class="pub-content">
+                            <h3>Smart farming in Thailand</h3>
+                            <p class="authors">Tiammee S.; Wongyai J.; Udomwong P.; Phaphuangwittayakul A.; Saenchan L.; Chanaim S.</p>
+                            <p class="venue">2019 13th International Conference on Software, Knowledge, Information Management and Applications, SKIMA 2019</p>
+                            <p class="citations">📚 4 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Smart Farming</span>
+                                <span class="tag">Agriculture</span>
+                                <span class="tag">IoT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2018-2019">
+                        <div class="pub-year">2018</div>
+                        <div class="pub-content">
+                            <h3>Analysis of Skill Demand in Thai Labor Market from Online Jobs Recruitments Websites</h3>
+                            <p class="authors">Phaphuangwittayakul A.; Saranwong S.; Panyakaew S.-N.; Inkeaw P.; Chaijaruwanich J.</p>
+                            <p class="venue">Proceeding of 2018 15th International Joint Conference on Computer Science and Software Engineering, JCSSE 2018</p>
+                            <p class="citations">📚 5 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Labor Market Analysis</span>
+                                <span class="tag">Data Mining</span>
+                                <span class="tag">Job Market</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="publication-item" data-year="2018-2019">
+                        <div class="pub-year">2018</div>
+                        <div class="pub-content">
+                            <h3>From complex network to skeleton: Mj-Modified topology potential for node importance identification</h3>
+                            <p class="authors">Yuan H.; Malang K.; Lv Y.; Phaphuangwittayakul A.</p>
+                            <p class="venue">Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)</p>
+                            <p class="citations">📚 3 citations</p>
+                            <div class="pub-tags">
+                                <span class="tag">Complex Networks</span>
+                                <span class="tag">Topology</span>
+                                <span class="tag">Node Importance</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Teaching -->
+            <section id="teaching" class="section">
+                <h2>Teaching Courses</h2>
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-code">888102</div>
+                        <h3>Big Data for Business</h3>
+                        <p>Advanced analytics and data science applications in business contexts</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-code">888251</div>
+                        <h3>Digital Platforms</h3>
+                        <p>Modern digital platform architectures and development</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-code">888311</div>
+                        <h3>Digital Business Ecosystem</h3>
+                        <p>Understanding digital transformation and business ecosystems</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-code">888343</div>
+                        <h3>Application Development for Digital Startup</h3>
+                        <p>Low-code and no-code platforms for rapid application development</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-code">888351</div>
+                        <h3>Modern Computer Vision and Applications</h3>
+                        <p>Advanced computer vision techniques for entrepreneurs</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- AI Demos Section -->
+            <section id="ai-demos" class="section">
+                <h2>Interactive AI Demonstrations</h2>
+                
+                <!-- Image Classification Demo -->
+                <div class="demo-container">
+                    <h3>Computer Vision Demo</h3>
+                    <div class="demo-content">
+                        <div class="image-upload-area">
+                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                            <div class="upload-placeholder" onclick="document.getElementById('imageInput').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload an image for analysis</p>
+                            </div>
+                            <canvas id="imageCanvas" style="display: none;"></canvas>
+                        </div>
+                        <div class="analysis-results">
+                            <h4>Analysis Results</h4>
+                            <div id="analysisOutput">
+                                <p>Upload an image to see AI analysis results</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Generation Demo -->
+                <div class="demo-container">
+                    <h3>AI Text Generation</h3>
+                    <div class="demo-content">
+                        <div class="text-input-area">
+                            <textarea id="promptInput" placeholder="Enter a research topic or question..."></textarea>
+                            <button id="generateText" class="btn-ai">Generate AI Response</button>
+                        </div>
+                        <div class="text-output">
+                            <h4>Generated Response</h4>
+                            <div id="textOutput">
+                                <p>Enter a prompt to see AI-generated academic content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Research Paper Similarity -->
+                <div class="demo-container">
+                    <h3>Research Paper Similarity Analyzer</h3>
+                    <div class="demo-content">
+                        <div class="paper-input">
+                            <input type="text" id="paperTitle" placeholder="Enter paper title...">
+                            <button id="findSimilar" class="btn-ai">Find Similar Papers</button>
+                        </div>
+                        <div class="similarity-results">
+                            <h4>Similar Research Papers</h4>
+                            <div id="similarityOutput">
+                                <p>Enter a paper title to find related research</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
