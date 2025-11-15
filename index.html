@@ -1,147 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aniwat Phaphuangwittayakul - Lecturer, AI Researcher</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="neo-styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neo-yellow': '#FFE500',
+                        'neo-pink': '#FF006E',
+                        'neo-blue': '#00F5FF',
+                        'neo-green': '#00FF85',
+                        'neo-purple': '#8B5CF6',
+                        'neo-orange': '#FF6B00',
+                    },
+                    fontFamily: {
+                        'space': ['Space Grotesk', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <div id="background-container"></div>
-    <!-- Mobile Navigation Toggle -->
-    <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <i class="fas fa-bars"></i>
+<body class="bg-white font-space overflow-x-hidden">
+    <!-- Floating Navigation -->
+    <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 neo-nav" id="mainNav">
+        <div class="flex items-center gap-2 bg-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-2 md:p-4">
+            <a href="#home" class="nav-item active" data-section="home">HOME</a>
+            <a href="#education" class="nav-item" data-section="education">EDU</a>
+            <a href="#research" class="nav-item" data-section="research">RESEARCH</a>
+            <a href="#publications" class="nav-item" data-section="publications">PUBS</a>
+            <a href="#teaching" class="nav-item" data-section="teaching">TEACH</a>
+            <a href="#ai-demos" class="nav-item" data-section="ai-demos">DEMOS</a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="fixed top-8 right-8 z-50 md:hidden bg-neo-pink border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1">
+        <i class="fas fa-bars text-white text-xl"></i>
     </button>
-    
-    <!-- Navigation Overlay for Mobile -->
-    <div class="nav-overlay"></div>
-    <div class="container">
-        <!-- Navigation -->
-        <nav class="nav-sidebar">
-            <div class="nav-header">
-                <h3>Navigation</h3>
+
+    <!-- Main Content -->
+    <main class="pt-32">
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-8 py-20 relative overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute top-20 left-10 w-32 h-32 bg-neo-yellow border-4 border-black rotate-12 animate-float"></div>
+                <div class="absolute top-40 right-20 w-24 h-24 bg-neo-pink border-4 border-black rounded-full animate-float-delayed"></div>
+                <div class="absolute bottom-20 left-1/4 w-40 h-40 bg-neo-blue border-4 border-black -rotate-12 animate-float"></div>
+                <div class="absolute bottom-40 right-1/3 w-28 h-28 bg-neo-green border-4 border-black rounded-full animate-float-delayed"></div>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#research" class="nav-link">Research</a></li>
-                <li><a href="#publications" class="nav-link">Publications</a></li>
-                <li><a href="#teaching" class="nav-link">Teaching</a></li>
-                <li><a href="#ai-demos" class="nav-link">AI Demos</a></li>
-            </ul>
-        </nav>
 
-        <!-- Main Content -->
-        <main class="main-content">
-            <!-- Hero Section -->
-            <section id="home" class="hero-section">
-                <div class="hero-content">
-                    <div class="profile-section">
-                        <div class="profile-image">
-                            <img src="./profile.png" alt="Aniwat Phaphuangwittayakul" />
-                            <div class="ai-pulse"></div>
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+                <!-- Profile Image -->
+                <div class="order-2 md:order-1 flex justify-center reveal-left">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-neo-yellow border-4 border-black rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
+                        <div class="relative bg-white border-4 border-black p-2 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
+                            <img src="./profile.png" alt="Aniwat Phaphuangwittayakul" class="w-full max-w-sm border-4 border-black" />
                         </div>
-                        <div class="profile-info">
-                            <h1 class="name">Aniwat Phaphuangwittayakul</h1>
-                            <p class="title">D.Eng., Lecturer</p>
-                            <p class="affiliation">International College of Digital Innovation<br>Chiang Mai University</p>
-                            
-                            <!-- AI Research Focus Visualization -->
-                            <div class="research-focus">
-                                <h3>Research Focus</h3>
-                                <div class="focus-tags">
-                                    <span class="tag ai-tag" data-field="cv">Computer Vision</span>
-                                    <span class="tag ai-tag" data-field="net">Complex Network</span>
-                                    <span class="tag ai-tag" data-field="kd">Knowledge Discovery</span>
-                                    <span class="tag ai-tag" data-field="gen">Generative Models</span>
-                                    <span class="tag ai-tag" data-field="fsl">Few-Shot Learning</span>
+                        <div class="absolute -bottom-6 -right-6 bg-neo-pink border-4 border-black px-6 py-3 rotate-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                            <span class="text-white font-bold text-sm">D.Eng.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile Info -->
+                <div class="order-1 md:order-2 reveal-right">
+                    <div class="bg-neo-blue border-4 border-black px-4 py-2 inline-block mb-6 -rotate-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
+                        <span class="font-mono text-sm font-bold">AI RESEARCHER</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                        <span class="inline-block hover:text-neo-pink transition-colors duration-300 cursor-default">ANIWAT</span><br>
+                        <span class="inline-block hover:text-neo-yellow transition-colors duration-300 cursor-default">PHAPHUANG</span><br>
+                        <span class="inline-block hover:text-neo-blue transition-colors duration-300 cursor-default">WITTAYAKUL</span>
+                    </h1>
+                    
+                    <div class="bg-black text-white border-4 border-black p-6 mb-6 shadow-[8px_8px_0px_0px_rgba(255,229,0,1)]">
+                        <p class="text-lg font-bold mb-2">LECTURER</p>
+                        <p class="font-mono text-sm">International College of Digital Innovation</p>
+                        <p class="font-mono text-sm">Chiang Mai University</p>
+                    </div>
+
+                    <!-- Research Tags -->
+                    <div class="flex flex-wrap gap-3">
+                        <span class="neo-tag bg-neo-pink">Computer Vision</span>
+                        <span class="neo-tag bg-neo-green">Complex Network</span>
+                        <span class="neo-tag bg-neo-yellow text-black">Knowledge Discovery</span>
+                        <span class="neo-tag bg-neo-purple">Generative Models</span>
+                        <span class="neo-tag bg-neo-orange">Few-Shot Learning</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="min-h-screen py-20 px-4 md:px-8 bg-neo-yellow relative overflow-hidden">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-6xl md:text-8xl font-black mb-16 reveal-up">
+                    <span class="inline-block border-8 border-black bg-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-2">EDUCATION</span>
+                </h2>
+
+                <div class="space-y-8">
+                    <!-- D.Eng -->
+                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div class="flex-1">
+                                <div class="bg-neo-pink border-4 border-black px-4 py-2 inline-block mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                    <span class="text-white font-bold text-sm">2023</span>
                                 </div>
+                                <h3 class="text-3xl font-black mb-2">D.Eng.</h3>
+                                <p class="text-xl font-bold mb-2">Computer Science and Technology</p>
+                                <p class="font-mono text-sm">East China University of Science and Technology (ECUST)</p>
                             </div>
+                            <div class="text-9xl font-black text-neo-pink opacity-20">01</div>
+                        </div>
+                    </div>
+
+                    <!-- M.S -->
+                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div class="flex-1">
+                                <div class="bg-neo-blue border-4 border-black px-4 py-2 inline-block mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                    <span class="text-black font-bold text-sm">2017</span>
+                                </div>
+                                <h3 class="text-3xl font-black mb-2">M.S.</h3>
+                                <p class="text-xl font-bold mb-2">Control Science and Engineering</p>
+                                <p class="font-mono text-sm">Beijing Institute of Technology (BIT)</p>
+                            </div>
+                            <div class="text-9xl font-black text-neo-blue opacity-20">02</div>
+                        </div>
+                    </div>
+
+                    <!-- B.Sc -->
+                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                            <div class="flex-1">
+                                <div class="bg-neo-green border-4 border-black px-4 py-2 inline-block mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                    <span class="text-black font-bold text-sm">2012</span>
+                                </div>
+                                <h3 class="text-3xl font-black mb-2">B.Sc.</h3>
+                                <p class="text-xl font-bold mb-2">Computer Engineering</p>
+                                <p class="font-mono text-sm">Chiang Mai University</p>
+                            </div>
+                            <div class="text-9xl font-black text-neo-green opacity-20">03</div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Education Section -->
-            <section id="education" class="section">
-                <h2>Education</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>D.Eng. (Computer Science and Technology)</h3>
-                            <p class="institution">East China University of Science and Technology (ECUST)</p>
-                            <p class="year">2023</p>
-                        </div>
+        <!-- Research Section -->
+        <section id="research" class="min-h-screen py-20 px-4 md:px-8 bg-white">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-6xl md:text-8xl font-black mb-16 reveal-up">
+                    <span class="inline-block border-8 border-black bg-neo-pink text-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-2">RESEARCH</span>
+                </h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Computer Vision -->
+                    <div class="neo-card bg-neo-blue reveal-up" style="animation-delay: 0.1s">
+                        <div class="text-6xl mb-4"><i class="fas fa-eye"></i></div>
+                        <h3 class="text-2xl font-black mb-3">COMPUTER VISION</h3>
+                        <p class="font-mono text-sm">Image processing, object detection, and visual recognition</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>M.S. (Control Science and Engineering)</h3>
-                            <p class="institution">Beijing Institute of Technology (BIT)</p>
-                            <p class="year">2017</p>
-                        </div>
+
+                    <!-- Complex Network -->
+                    <div class="neo-card bg-neo-green reveal-up" style="animation-delay: 0.2s">
+                        <div class="text-6xl mb-4"><i class="fa-solid fa-share-nodes"></i></div>
+                        <h3 class="text-2xl font-black mb-3">COMPLEX NETWORK</h3>
+                        <p class="font-mono text-sm">Interconnected systems with nodes and edges showing emergent behaviors</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker"></div>
-                        <div class="timeline-content">
-                            <h3>B.Sc. (Computer Engineering)</h3>
-                            <p class="institution">Chiang Mai University</p>
-                            <p class="year">2012</p>
-                        </div>
+
+                    <!-- Knowledge Discovery -->
+                    <div class="neo-card bg-neo-yellow reveal-up" style="animation-delay: 0.3s">
+                        <div class="text-6xl mb-4"><i class="fa-solid fa-vials"></i></div>
+                        <h3 class="text-2xl font-black mb-3">KNOWLEDGE DISCOVERY</h3>
+                        <p class="font-mono text-sm">Process of extracting useful insights from large datasets</p>
+                    </div>
+
+                    <!-- Generative Models -->
+                    <div class="neo-card bg-neo-purple text-white reveal-up" style="animation-delay: 0.4s">
+                        <div class="text-6xl mb-4"><i class="fas fa-brain"></i></div>
+                        <h3 class="text-2xl font-black mb-3">GENERATIVE MODELS</h3>
+                        <p class="font-mono text-sm">GANs, VAEs, and other generative AI architectures</p>
+                    </div>
+
+                    <!-- Few-Shot Learning -->
+                    <div class="neo-card bg-neo-orange text-white reveal-up" style="animation-delay: 0.5s">
+                        <div class="text-6xl mb-4"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="text-2xl font-black mb-3">FEW-SHOT LEARNING</h3>
+                        <p class="font-mono text-sm">Learning from limited data and meta-learning approaches</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Research Interests -->
-            <section id="research" class="section">
-                <h2>Research Interests</h2>
-                <div class="research-grid">
-                    <div class="research-card" data-research="cv">
-                        <div class="card-icon">
-                            <i class="fas fa-eye"></i>
-                        </div>
-                        <h3>Computer Vision</h3>
-                        <p>Image processing, object detection, and visual recognition</p>
-                    </div>
-                    <div class="research-card" data-research="complex-networks">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-share-nodes"></i>
-                        </div>
-                        <h3>Complex Network</h3>
-                        <p>Interconnected systems with nodes and edges showing emergent behaviors</p>
-                    </div>
-                    <div class="research-card" data-research="knowledge-discovery">
-                        <div class="card-icon">
-                            <i class="fa-solid fa-vials"></i>
-                        </div>
-                        <h3>Knowledge Discovery</h3>
-                        <p>Process of extracting useful insights from large datasets</p>
-                    </div>
-                    <div class="research-card" data-research="gen">
-                        <div class="card-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h3>Generative Models</h3>
-                        <p>GANs, VAEs, and other generative AI architectures</p>
-                    </div>
-                    <div class="research-card" data-research="fsl">
-                        <div class="card-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <h3>Few-Shot Learning</h3>
-                        <p>Learning from limited data and meta-learning approaches</p>
-                    </div>
-                </div>
-            </section>
+        <!-- Publications -->
+        <section id="publications" class="min-h-screen py-20 px-4 md:px-8 bg-neo-pink relative overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-6xl md:text-8xl font-black mb-12 reveal-up">
+                    <span class="inline-block border-8 border-black bg-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-1">PUBLICATIONS</span>
+                </h2>
 
-            <!-- Publications -->
-            <section id="publications" class="section">
-                <h2>Publications</h2>
-                <div class="publication-filters">
-                    <button class="filter-btn active" data-year="all">All Years</button>
+                <!-- Year Filters -->
+                <div class="flex flex-wrap gap-3 mb-12 reveal-up">
+                    <button class="filter-btn active" data-year="all">ALL</button>
                     <button class="filter-btn" data-year="2025">2025</button>
                     <button class="filter-btn" data-year="2024">2024</button>
                     <button class="filter-btn" data-year="2023">2023</button>
@@ -149,18 +222,20 @@
                     <button class="filter-btn" data-year="2021">2021</button>
                     <button class="filter-btn" data-year="2018-2020">2018-2020</button>
                 </div>
-                <div class="publications-list">
+
+                <div class="publications-list space-y-6">
                     <!-- 2025 Publications -->
-                    <div class="publication-item" data-year="2025">
-                        <div class="pub-year">2025</div>
-                        <div class="pub-content">
-                            <h3>Computational Design of Potentially Multifunctional Antimicrobial Peptide Candidates via a Hybrid Generative Model</h3>
-                            <p class="authors">Ying, F.; Go, W.; Li, Z.; Ouyang, C.; Phaphuangwittayakul, A.; Dhuny, R.</p>
-                            <p class="venue">International Journal of Molecular Sciences</p>
-                            <div class="pub-tags">
-                                <span class="tag">Generative Models</span>
-                                <span class="tag">Antimicrobial Peptides</span>
-                                <span class="tag">Hybrid Generative Models</span>
+                    <div class="publication-item bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300" data-year="2025">
+                        <div class="flex flex-col md:flex-row gap-4">
+                            <div class="bg-neo-yellow border-4 border-black px-4 py-2 font-black text-xl h-fit shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">2025</div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-black mb-2">Computational Design of Potentially Multifunctional Antimicrobial Peptide Candidates via a Hybrid Generative Model</h3>
+                                <p class="font-mono text-sm mb-2">Ying, F.; Go, W.; Li, Z.; Ouyang, C.; Phaphuangwittayakul, A.; Dhuny, R.</p>
+                                <p class="text-sm font-bold mb-3">International Journal of Molecular Sciences</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="neo-tag-small bg-neo-purple">Generative Models</span>
+                                    <span class="neo-tag-small bg-neo-green">Antimicrobial Peptides</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -425,102 +500,133 @@
                 </div>
             </section>
 
-            <!-- Teaching -->
-            <section id="teaching" class="section">
-                <h2>Teaching Courses</h2>
-                <div class="courses-grid">
-                    <div class="course-card">
-                        <div class="course-code">888102</div>
-                        <h3>Big Data for Business</h3>
-                        <p>Advanced analytics and data science applications in business contexts</p>
+        <!-- Teaching -->
+        <section id="teaching" class="min-h-screen py-20 px-4 md:px-8 bg-neo-green relative overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-6xl md:text-8xl font-black mb-16 reveal-up">
+                    <span class="inline-block border-8 border-black bg-black text-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(255,229,0,1)] rotate-1">TEACHING</span>
+                </h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
+                        <div class="bg-neo-yellow border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-3">888102</div>
+                        <h3 class="text-2xl font-black mb-3">BIG DATA FOR BUSINESS</h3>
+                        <p class="font-mono text-sm">Advanced analytics and data science applications in business contexts</p>
                     </div>
-                    <div class="course-card">
-                        <div class="course-code">888251</div>
-                        <h3>Digital Platforms</h3>
-                        <p>Modern digital platform architectures and development</p>
+                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
+                        <div class="bg-neo-blue border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-2">888251</div>
+                        <h3 class="text-2xl font-black mb-3">DIGITAL PLATFORMS</h3>
+                        <p class="font-mono text-sm">Modern digital platform architectures and development</p>
                     </div>
-                    <div class="course-card">
-                        <div class="course-code">888311</div>
-                        <h3>Digital Business Ecosystem</h3>
-                        <p>Understanding digital transformation and business ecosystems</p>
+                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
+                        <div class="bg-neo-pink border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-2">888311</div>
+                        <h3 class="text-2xl font-black mb-3">DIGITAL BUSINESS ECOSYSTEM</h3>
+                        <p class="font-mono text-sm">Understanding digital transformation and business ecosystems</p>
                     </div>
-                    <div class="course-card">
-                        <div class="course-code">888343</div>
-                        <h3>Application Development for Digital Startup</h3>
-                        <p>Low-code and no-code platforms for rapid application development</p>
+                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
+                        <div class="bg-neo-purple border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-3">888343</div>
+                        <h3 class="text-2xl font-black mb-3">APP DEV FOR DIGITAL STARTUP</h3>
+                        <p class="font-mono text-sm">Low-code and no-code platforms for rapid application development</p>
                     </div>
-                    <div class="course-card">
-                        <div class="course-code">888351</div>
-                        <h3>Modern Computer Vision and Applications</h3>
-                        <p>Advanced computer vision techniques for entrepreneurs</p>
+                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
+                        <div class="bg-neo-orange border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">888351</div>
+                        <h3 class="text-2xl font-black mb-3">MODERN COMPUTER VISION</h3>
+                        <p class="font-mono text-sm">Advanced computer vision techniques for entrepreneurs</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- AI Demos Section -->
-            <section id="ai-demos" class="section">
-                <h2>Interactive AI Demonstrations</h2>
-                
-                <!-- Image Classification Demo -->
-                <div class="demo-container">
-                    <h3>Computer Vision Demo</h3>
-                    <div class="demo-content">
-                        <div class="image-upload-area">
-                            <input type="file" id="imageInput" accept="image/*" style="display: none;">
-                            <div class="upload-placeholder" onclick="document.getElementById('imageInput').click()">
-                                <i class="fas fa-cloud-upload-alt"></i>
-                                <p>Click to upload an image for analysis</p>
-                            </div>
-                            <canvas id="imageCanvas" style="display: none;"></canvas>
-                        </div>
-                        <div class="analysis-results">
-                            <h4>Analysis Results</h4>
-                            <div id="analysisOutput">
-                                <p>Upload an image to see AI analysis results</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- AI Demos Section -->
+        <section id="ai-demos" class="min-h-screen py-20 px-4 md:px-8 bg-neo-blue relative overflow-hidden">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-6xl md:text-8xl font-black mb-16 reveal-up">
+                    <span class="inline-block border-8 border-black bg-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-2">AI DEMOS</span>
+                </h2>
 
-                <!-- Text Generation Demo -->
-                <div class="demo-container">
-                    <h3>AI Text Generation</h3>
-                    <div class="demo-content">
-                        <div class="text-input-area">
-                            <textarea id="promptInput" placeholder="Enter a research topic or question..."></textarea>
-                            <button id="generateText" class="btn-ai">Generate AI Response</button>
-                        </div>
-                        <div class="text-output">
-                            <h4>Generated Response</h4>
-                            <div id="textOutput">
-                                <p>Enter a prompt to see AI-generated academic content</p>
+                <div class="space-y-8">
+                    <!-- Computer Vision Demo -->
+                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] reveal-up">
+                        <h3 class="text-3xl font-black mb-6 flex items-center gap-3">
+                            <span class="bg-neo-pink border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                <i class="fas fa-eye text-white"></i>
+                            </span>
+                            COMPUTER VISION DEMO
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <input type="file" id="imageInput" accept="image/*" class="hidden">
+                                <div class="border-4 border-dashed border-black p-12 text-center cursor-pointer hover:bg-neo-yellow transition-colors duration-300" onclick="document.getElementById('imageInput').click()">
+                                    <i class="fas fa-cloud-upload-alt text-6xl mb-4"></i>
+                                    <p class="font-bold">CLICK TO UPLOAD IMAGE</p>
+                                </div>
+                                <canvas id="imageCanvas" class="hidden w-full border-4 border-black mt-4"></canvas>
+                            </div>
+                            <div class="bg-black border-4 border-black p-6 text-white">
+                                <h4 class="font-black text-xl mb-4 text-neo-yellow">ANALYSIS RESULTS</h4>
+                                <div id="analysisOutput" class="font-mono text-sm">
+                                    <p>Upload an image to see AI analysis results</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Research Paper Similarity -->
-                <div class="demo-container">
-                    <h3>Research Paper Similarity Analyzer</h3>
-                    <div class="demo-content">
-                        <div class="paper-input">
-                            <input type="text" id="paperTitle" placeholder="Enter paper title...">
-                            <button id="findSimilar" class="btn-ai">Find Similar Papers</button>
+                    <!-- Text Generation Demo -->
+                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] reveal-up">
+                        <h3 class="text-3xl font-black mb-6 flex items-center gap-3">
+                            <span class="bg-neo-purple border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                <i class="fas fa-brain text-white"></i>
+                            </span>
+                            AI TEXT GENERATION
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <textarea id="promptInput" class="w-full h-40 border-4 border-black p-4 font-mono text-sm focus:outline-none focus:ring-4 focus:ring-neo-yellow" placeholder="Enter a research topic or question..."></textarea>
+                                <button id="generateText" class="neo-button bg-neo-purple mt-4">GENERATE AI RESPONSE</button>
+                            </div>
+                            <div class="bg-black border-4 border-black p-6 text-white">
+                                <h4 class="font-black text-xl mb-4 text-neo-green">GENERATED RESPONSE</h4>
+                                <div id="textOutput" class="font-mono text-sm">
+                                    <p>Enter a prompt to see AI-generated academic content</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="similarity-results">
-                            <h4>Similar Research Papers</h4>
-                            <div id="similarityOutput">
-                                <p>Enter a paper title to find related research</p>
+                    </div>
+
+                    <!-- Research Paper Similarity -->
+                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] reveal-up">
+                        <h3 class="text-3xl font-black mb-6 flex items-center gap-3">
+                            <span class="bg-neo-green border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
+                                <i class="fas fa-search text-black"></i>
+                            </span>
+                            RESEARCH PAPER SIMILARITY
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <input type="text" id="paperTitle" class="w-full border-4 border-black p-4 font-mono text-sm focus:outline-none focus:ring-4 focus:ring-neo-green" placeholder="Enter paper title...">
+                                <button id="findSimilar" class="neo-button bg-neo-green mt-4">FIND SIMILAR PAPERS</button>
+                            </div>
+                            <div class="bg-black border-4 border-black p-6 text-white">
+                                <h4 class="font-black text-xl mb-4 text-neo-blue">SIMILAR PAPERS</h4>
+                                <div id="similarityOutput" class="font-mono text-sm">
+                                    <p>Enter a paper title to find related research</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </main>
-    </div>
+            </div>
+        </section>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
-    <script src="3d.js"></script>
-    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12 px-4 md:px-8 border-t-8 border-neo-yellow">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="font-black text-2xl mb-4">ANIWAT PHAPHUANGWITTAYAKUL</p>
+            <p class="font-mono text-sm">© 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="neo-script.js"></script>
 </body>
 </html>
