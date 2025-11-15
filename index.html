@@ -30,8 +30,8 @@
     </script>
 </head>
 <body class="bg-white font-space overflow-x-hidden">
-    <!-- Floating Navigation -->
-    <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 neo-nav" id="mainNav">
+    <!-- Desktop Navigation -->
+    <nav class="hidden md:block fixed top-8 left-1/2 -translate-x-1/2 z-50 neo-nav" id="mainNav">
         <div class="flex items-center gap-2 bg-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-2 md:p-4">
             <a href="#home" class="nav-item active" data-section="home">HOME</a>
             <a href="#education" class="nav-item" data-section="education">EDU</a>
@@ -43,9 +43,21 @@
     </nav>
 
     <!-- Mobile Menu Button -->
-    <button id="mobileMenuBtn" class="fixed top-8 right-8 z-50 md:hidden bg-neo-pink border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1">
-        <i class="fas fa-bars text-white text-xl"></i>
+    <button id="mobileMenuBtn" class="fixed top-8 right-8 z-50 md:hidden bg-neo-pink border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all duration-300">
+        <i class="fas fa-bars text-white text-xl" id="menuIcon"></i>
     </button>
+
+    <!-- Mobile Navigation Menu -->
+    <nav id="mobileNav" class="fixed inset-0 bg-black z-40 md:hidden transform translate-x-full transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col items-center justify-center h-full gap-6 p-8">
+            <a href="#home" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-yellow transition-colors duration-300" data-section="home">HOME</a>
+            <a href="#education" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-blue transition-colors duration-300" data-section="education">EDUCATION</a>
+            <a href="#research" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-pink transition-colors duration-300" data-section="research">RESEARCH</a>
+            <a href="#publications" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-green transition-colors duration-300" data-section="publications">PUBLICATIONS</a>
+            <a href="#teaching" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-orange transition-colors duration-300" data-section="teaching">TEACHING</a>
+            <a href="#ai-demos" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-purple transition-colors duration-300" data-section="ai-demos">AI DEMOS</a>
+        </div>
+    </nav>
 
     <!-- Main Content -->
     <main class="pt-32">
@@ -122,7 +134,7 @@
                                 <p class="text-xl font-bold mb-2">Computer Science and Technology</p>
                                 <p class="font-mono text-sm">East China University of Science and Technology (ECUST)</p>
                             </div>
-                            <div class="text-9xl font-black text-neo-pink opacity-20">01</div>
+                            <div class="text-9xl font-black text-neo-pink opacity-20">03</div>
                         </div>
                     </div>
 
@@ -152,7 +164,7 @@
                                 <p class="text-xl font-bold mb-2">Computer Engineering</p>
                                 <p class="font-mono text-sm">Chiang Mai University</p>
                             </div>
-                            <div class="text-9xl font-black text-neo-green opacity-20">03</div>
+                            <div class="text-9xl font-black text-neo-green opacity-20">01</div>
                         </div>
                     </div>
                 </div>

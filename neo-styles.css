@@ -452,6 +452,52 @@ h2:hover {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Mobile Navigation */
+#mobileNav {
+    backdrop-filter: blur(10px);
+}
+
+.mobile-nav-item {
+    position: relative;
+    padding: 1rem 2rem;
+    text-align: center;
+    border: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-item::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background: currentColor;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.mobile-nav-item:hover::before {
+    width: 80%;
+}
+
+.mobile-nav-item:active {
+    transform: scale(0.95);
+}
+
+/* Mobile Menu Button Animation */
+#mobileMenuBtn {
+    overflow: hidden;
+}
+
+#menuIcon {
+    transition: transform 0.3s ease;
+}
+
+#mobileMenuBtn:hover #menuIcon {
+    transform: rotate(90deg);
+}
+
 /* Mobile Menu Overlay */
 .mobile-menu-overlay {
     position: fixed;
