@@ -1,644 +1,698 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniwat Phaphuangwittayakul - Lecturer, AI Researcher</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="neo-styles.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'neo-yellow': '#FFE500',
-                        'neo-pink': '#FF006E',
-                        'neo-blue': '#00F5FF',
-                        'neo-green': '#00FF85',
-                        'neo-purple': '#8B5CF6',
-                        'neo-orange': '#FF6B00',
-                    },
-                    fontFamily: {
-                        'space': ['Space Grotesk', 'sans-serif'],
-                        'mono': ['JetBrains Mono', 'monospace'],
-                    },
-                }
-            }
-        }
-    </script>
+    <title>Dr. Aniwat Phaphuangwittayakul — Lecturer &amp; AI Researcher</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="prof-styles.css">
 </head>
-<body class="bg-white font-space overflow-x-hidden">
-    <!-- Desktop Navigation -->
-    <nav class="hidden md:block fixed top-8 left-1/2 -translate-x-1/2 z-50 neo-nav" id="mainNav">
-        <div class="flex items-center gap-2 bg-black border-4 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] p-2 md:p-4">
-            <a href="#home" class="nav-item active" data-section="home">HOME</a>
-            <a href="#education" class="nav-item" data-section="education">EDU</a>
-            <a href="#research" class="nav-item" data-section="research">RESEARCH</a>
-            <a href="#publications" class="nav-item" data-section="publications">PUBS</a>
-            <a href="#teaching" class="nav-item" data-section="teaching">TEACH</a>
-            <a href="#ai-demos" class="nav-item" data-section="ai-demos">DEMOS</a>
+<body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-brand">Assist.Prof.Dr. Aniwat Phaphuangwittayakul</a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#publications" class="nav-link">Publications</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#demos" class="nav-link">AI Demos</a></li>
+            </ul>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
-    <!-- Mobile Menu Button -->
-    <button id="mobileMenuBtn" class="fixed top-8 right-8 z-50 md:hidden bg-neo-pink border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] active:shadow-none active:translate-x-1 active:translate-y-1 transition-all duration-300">
-        <i class="fas fa-bars text-white text-xl" id="menuIcon"></i>
-    </button>
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#home">About</a>
+        <a href="#education">Education</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#demos">AI Demos</a>
+    </div>
 
-    <!-- Mobile Navigation Menu -->
-    <nav id="mobileNav" class="fixed inset-0 bg-black z-40 md:hidden transform translate-x-full transition-transform duration-300 ease-in-out">
-        <div class="flex flex-col items-center justify-center h-full gap-6 p-8">
-            <a href="#home" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-yellow transition-colors duration-300" data-section="home">HOME</a>
-            <a href="#education" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-blue transition-colors duration-300" data-section="education">EDUCATION</a>
-            <a href="#research" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-pink transition-colors duration-300" data-section="research">RESEARCH</a>
-            <a href="#publications" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-green transition-colors duration-300" data-section="publications">PUBLICATIONS</a>
-            <a href="#teaching" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-orange transition-colors duration-300" data-section="teaching">TEACHING</a>
-            <a href="#ai-demos" class="mobile-nav-item text-white text-3xl font-black hover:text-neo-purple transition-colors duration-300" data-section="ai-demos">AI DEMOS</a>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <!-- Profile Card (Left) -->
+            <div class="profile-card">
+                <div class="profile-image-wrapper">
+                    <img src="./profile.png" alt="Dr. Aniwat Phaphuangwittayakul" class="profile-image">
+                    <span class="profile-badge">D.Eng.</span>
+                </div>
+                <div class="contact-links">
+                    <a href="mailto:aniwat.p@cmu.ac.th" class="contact-link"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://scholar.google.com/citations?user=d06KlYQAAAAJ&hl=en" class="contact-link" target="_blank"><i class="fas fa-graduation-cap"></i> Scholar</a>
+                    <a href="https://github.com/phaphuang" class="contact-link"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <!-- Profile Info (Right) -->
+            <div class="profile-info">
+                <h1>Aniwat Phaphuangwittayakul</h1>
+                <p class="profile-title">Assistant Professor &amp; Lecturer &amp; AI Researcher</p>
+                <p class="profile-affiliation">International College of Digital Innovation, Chiang Mai University</p>
+
+                <p class="profile-bio">
+                    My research focuses on the intersection of computer vision, complex networks, and generative models. 
+                    I am particularly interested in few-shot learning methods, knowledge discovery from large-scale data, 
+                    and developing practical AI systems for real-world applications including medical imaging and transportation.
+                </p>
+
+                <div class="research-tags">
+                    <span class="research-tag">Computer Vision</span>
+                    <span class="research-tag">Complex Networks</span>
+                    <span class="research-tag">Knowledge Discovery</span>
+                    <span class="research-tag">Generative Models</span>
+                    <span class="research-tag">Few-Shot Learning</span>
+                </div>
+
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="21">0</div>
+                        <div class="stat-label">Publications</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Research Areas</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Courses</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-label">Years Active</div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </nav>
+    </section>
 
-    <!-- Main Content -->
-    <main class="pt-32">
-        <!-- Hero Section -->
-        <section id="home" class="min-h-screen flex items-center justify-center px-4 md:px-8 py-20 relative overflow-hidden">
-            <!-- Animated Background Elements -->
-            <div class="absolute inset-0 -z-10">
-                <div class="absolute top-20 left-10 w-32 h-32 bg-neo-yellow border-4 border-black rotate-12 animate-float"></div>
-                <div class="absolute top-40 right-20 w-24 h-24 bg-neo-pink border-4 border-black rounded-full animate-float-delayed"></div>
-                <div class="absolute bottom-20 left-1/4 w-40 h-40 bg-neo-blue border-4 border-black -rotate-12 animate-float"></div>
-                <div class="absolute bottom-40 right-1/3 w-28 h-28 bg-neo-green border-4 border-black rounded-full animate-float-delayed"></div>
+    <!-- Education Section -->
+    <div class="section-alt">
+        <section id="education" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-university"></i></div>
+                <div>
+                    <h2 class="section-title">Education</h2>
+                    <div class="section-divider"></div>
+                </div>
             </div>
 
-            <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-                <!-- Profile Image -->
-                <div class="order-2 md:order-1 flex justify-center reveal-left">
-                    <div class="relative group">
-                        <div class="absolute -inset-4 bg-neo-yellow border-4 border-black rotate-3 group-hover:rotate-6 transition-transform duration-300"></div>
-                        <div class="relative bg-white border-4 border-black p-2 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] group-hover:shadow-[16px_16px_0px_0px_rgba(0,0,0,1)] transition-all duration-300">
-                            <img src="./profile.png" alt="Aniwat Phaphuangwittayakul" class="w-full max-w-sm border-4 border-black" />
-                        </div>
-                        <div class="absolute -bottom-6 -right-6 bg-neo-pink border-4 border-black px-6 py-3 rotate-3 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                            <span class="text-white font-bold text-sm">D.Eng.</span>
-                        </div>
+            <div class="timeline">
+                <div class="timeline-item" data-animate>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-degree">Doctor of Engineering (D.Eng.)</div>
+                        <div class="timeline-field">Computer Science and Technology</div>
+                        <div class="timeline-institution"><i class="fas fa-map-marker-alt"></i> East China University of Science and Technology (ECUST)</div>
                     </div>
                 </div>
 
-                <!-- Profile Info -->
-                <div class="order-1 md:order-2 reveal-right">
-                    <div class="bg-neo-blue border-4 border-black px-4 py-2 inline-block mb-6 -rotate-2 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)]">
-                        <span class="font-mono text-sm font-bold">AI RESEARCHER</span>
+                <div class="timeline-item" data-animate>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-degree">Master of Science (M.S.)</div>
+                        <div class="timeline-field">Control Science and Engineering</div>
+                        <div class="timeline-institution"><i class="fas fa-map-marker-alt"></i> Beijing Institute of Technology (BIT)</div>
                     </div>
-                    
-                    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
-                        <span class="inline-block hover:text-neo-pink transition-colors duration-300 cursor-default">ANIWAT</span><br>
-                        <span class="inline-block hover:text-neo-yellow transition-colors duration-300 cursor-default">PHAPHUANG</span><br>
-                        <span class="inline-block hover:text-neo-blue transition-colors duration-300 cursor-default">WITTAYAKUL</span>
-                    </h1>
-                    
-                    <div class="bg-black text-white border-4 border-black p-6 mb-6 shadow-[8px_8px_0px_0px_rgba(255,229,0,1)]">
-                        <p class="text-lg font-bold mb-2">LECTURER</p>
-                        <p class="font-mono text-sm">International College of Digital Innovation</p>
-                        <p class="font-mono text-sm">Chiang Mai University</p>
-                    </div>
+                </div>
 
-                    <!-- Research Tags -->
-                    <div class="flex flex-wrap gap-3">
-                        <span class="neo-tag bg-neo-pink">Computer Vision</span>
-                        <span class="neo-tag bg-neo-green">Complex Network</span>
-                        <span class="neo-tag bg-neo-yellow text-black">Knowledge Discovery</span>
-                        <span class="neo-tag bg-neo-purple">Generative Models</span>
-                        <span class="neo-tag bg-neo-orange">Few-Shot Learning</span>
+                <div class="timeline-item" data-animate>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-year">2012</div>
+                        <div class="timeline-degree">Bachelor of Science (B.Sc.)</div>
+                        <div class="timeline-field">Computer Engineering</div>
+                        <div class="timeline-institution"><i class="fas fa-map-marker-alt"></i> Chiang Mai University</div>
                     </div>
                 </div>
             </div>
         </section>
+    </div>
 
-        <!-- Education Section -->
-        <section id="education" class="min-h-screen py-20 px-4 md:px-8 bg-neo-yellow relative overflow-hidden">
-            <div class="max-w-6xl mx-auto">
-                <h2 class="text-6xl md:text-8xl font-black mb-16 reveal-up">
-                    <span class="inline-block border-8 border-black bg-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-2">EDUCATION</span>
-                </h2>
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="section-header">
+            <div class="section-icon"><i class="fas fa-flask"></i></div>
+            <div>
+                <h2 class="section-title">Research Interests</h2>
+                <p class="section-subtitle">Exploring the frontiers of artificial intelligence and data science</p>
+                <div class="section-divider"></div>
+            </div>
+        </div>
 
-                <div class="space-y-8">
-                    <!-- D.Eng -->
-                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                            <div class="flex-1">
-                                <div class="bg-neo-pink border-4 border-black px-4 py-2 inline-block mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                    <span class="text-white font-bold text-sm">2023</span>
-                                </div>
-                                <h3 class="text-3xl font-black mb-2">D.Eng.</h3>
-                                <p class="text-xl font-bold mb-2">Computer Science and Technology</p>
-                                <p class="font-mono text-sm">East China University of Science and Technology (ECUST)</p>
-                            </div>
-                            <div class="text-9xl font-black text-neo-pink opacity-20">03</div>
-                        </div>
+        <div class="research-grid stagger-children" data-animate>
+            <div class="research-card">
+                <div class="research-icon"><i class="fas fa-eye"></i></div>
+                <h3>Computer Vision</h3>
+                <p>Image processing, object detection, visual recognition, and transformer-based architectures for automated visual understanding systems.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon"><i class="fas fa-project-diagram"></i></div>
+                <h3>Complex Networks</h3>
+                <p>Analysis of interconnected systems, node importance identification, skeleton network extraction, and graph-based modeling of real-world phenomena.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon"><i class="fas fa-search"></i></div>
+                <h3>Knowledge Discovery</h3>
+                <p>Extracting meaningful patterns and insights from large-scale datasets using advanced data mining and analytical techniques.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon"><i class="fas fa-brain"></i></div>
+                <h3>Generative Models</h3>
+                <p>Generative adversarial networks (GANs), variational autoencoders (VAEs), and hybrid generative architectures for data synthesis.</p>
+            </div>
+
+            <div class="research-card">
+                <div class="research-icon"><i class="fas fa-bolt"></i></div>
+                <h3>Few-Shot Learning</h3>
+                <p>Meta-learning and prototypical approaches that enable models to learn effectively from extremely limited training examples.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <div class="section-alt">
+        <section id="publications" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-book-open"></i></div>
+                <div>
+                    <h2 class="section-title">Publications</h2>
+                    <p class="section-subtitle">Peer-reviewed journal articles and conference papers</p>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+
+            <!-- Publication Chart -->
+            <div class="pub-chart" data-animate>
+                <div class="pub-chart-title">Publications by Year</div>
+                <div class="chart-bars">
+                    <div class="chart-bar-group">
+                        <div class="chart-bar-count">3</div>
+                        <div class="chart-bar" style="height: 0" data-height="40%"></div>
+                        <div class="chart-bar-year">2018–19</div>
                     </div>
-
-                    <!-- M.S -->
-                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                            <div class="flex-1">
-                                <div class="bg-neo-blue border-4 border-black px-4 py-2 inline-block mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                    <span class="text-black font-bold text-sm">2017</span>
-                                </div>
-                                <h3 class="text-3xl font-black mb-2">M.S.</h3>
-                                <p class="text-xl font-bold mb-2">Control Science and Engineering</p>
-                                <p class="font-mono text-sm">Beijing Institute of Technology (BIT)</p>
-                            </div>
-                            <div class="text-9xl font-black text-neo-blue opacity-20">02</div>
-                        </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar-count">3</div>
+                        <div class="chart-bar" style="height: 0" data-height="40%"></div>
+                        <div class="chart-bar-year">2020</div>
                     </div>
-
-                    <!-- B.Sc -->
-                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
-                        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                            <div class="flex-1">
-                                <div class="bg-neo-green border-4 border-black px-4 py-2 inline-block mb-4 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                    <span class="text-black font-bold text-sm">2012</span>
-                                </div>
-                                <h3 class="text-3xl font-black mb-2">B.Sc.</h3>
-                                <p class="text-xl font-bold mb-2">Computer Engineering</p>
-                                <p class="font-mono text-sm">Chiang Mai University</p>
-                            </div>
-                            <div class="text-9xl font-black text-neo-green opacity-20">01</div>
-                        </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar-count">4</div>
+                        <div class="chart-bar" style="height: 0" data-height="55%"></div>
+                        <div class="chart-bar-year">2021</div>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar-count">3</div>
+                        <div class="chart-bar" style="height: 0" data-height="40%"></div>
+                        <div class="chart-bar-year">2022</div>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar-count">2</div>
+                        <div class="chart-bar" style="height: 0" data-height="28%"></div>
+                        <div class="chart-bar-year">2023</div>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar-count">2</div>
+                        <div class="chart-bar" style="height: 0" data-height="28%"></div>
+                        <div class="chart-bar-year">2024</div>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar-count">3</div>
+                        <div class="chart-bar" style="height: 0" data-height="40%"></div>
+                        <div class="chart-bar-year">2025</div>
+                    </div>
+                    <div class="chart-bar-group">
+                        <div class="chart-bar-count">1</div>
+                        <div class="chart-bar" style="height: 0" data-height="40%"></div>
+                        <div class="chart-bar-year">2026</div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Research Section -->
-        <section id="research" class="min-h-screen py-20 px-4 md:px-8 bg-white">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-6xl md:text-8xl font-black mb-16 reveal-up">
-                    <span class="inline-block border-8 border-black bg-neo-pink text-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] rotate-2">RESEARCH</span>
-                </h2>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Computer Vision -->
-                    <div class="neo-card bg-neo-blue reveal-up" style="animation-delay: 0.1s">
-                        <div class="text-6xl mb-4"><i class="fas fa-eye"></i></div>
-                        <h3 class="text-2xl font-black mb-3">COMPUTER VISION</h3>
-                        <p class="font-mono text-sm">Image processing, object detection, and visual recognition</p>
-                    </div>
-
-                    <!-- Complex Network -->
-                    <div class="neo-card bg-neo-green reveal-up" style="animation-delay: 0.2s">
-                        <div class="text-6xl mb-4"><i class="fa-solid fa-share-nodes"></i></div>
-                        <h3 class="text-2xl font-black mb-3">COMPLEX NETWORK</h3>
-                        <p class="font-mono text-sm">Interconnected systems with nodes and edges showing emergent behaviors</p>
-                    </div>
-
-                    <!-- Knowledge Discovery -->
-                    <div class="neo-card bg-neo-yellow reveal-up" style="animation-delay: 0.3s">
-                        <div class="text-6xl mb-4"><i class="fa-solid fa-vials"></i></div>
-                        <h3 class="text-2xl font-black mb-3">KNOWLEDGE DISCOVERY</h3>
-                        <p class="font-mono text-sm">Process of extracting useful insights from large datasets</p>
-                    </div>
-
-                    <!-- Generative Models -->
-                    <div class="neo-card bg-neo-purple text-white reveal-up" style="animation-delay: 0.4s">
-                        <div class="text-6xl mb-4"><i class="fas fa-brain"></i></div>
-                        <h3 class="text-2xl font-black mb-3">GENERATIVE MODELS</h3>
-                        <p class="font-mono text-sm">GANs, VAEs, and other generative AI architectures</p>
-                    </div>
-
-                    <!-- Few-Shot Learning -->
-                    <div class="neo-card bg-neo-orange text-white reveal-up" style="animation-delay: 0.5s">
-                        <div class="text-6xl mb-4"><i class="fas fa-graduation-cap"></i></div>
-                        <h3 class="text-2xl font-black mb-3">FEW-SHOT LEARNING</h3>
-                        <p class="font-mono text-sm">Learning from limited data and meta-learning approaches</p>
-                    </div>
-                </div>
+            <!-- Filters -->
+            <div class="pub-filters">
+                <button class="pub-filter-btn active" data-year="all">All</button>
+                <button class="pub-filter-btn" data-year="2026">2026</button>
+                <button class="pub-filter-btn" data-year="2025">2025</button>
+                <button class="pub-filter-btn" data-year="2024">2024</button>
+                <button class="pub-filter-btn" data-year="2023">2023</button>
+                <button class="pub-filter-btn" data-year="2022">2022</button>
+                <button class="pub-filter-btn" data-year="2021">2021</button>
+                <button class="pub-filter-btn" data-year="2018-2020">2018–2020</button>
             </div>
-        </section>
 
-        <!-- Publications -->
-        <section id="publications" class="min-h-screen py-20 px-4 md:px-8 bg-neo-pink relative overflow-hidden">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-6xl md:text-8xl font-black mb-12 reveal-up">
-                    <span class="inline-block border-8 border-black bg-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-1">PUBLICATIONS</span>
-                </h2>
-
-                <!-- Year Filters -->
-                <div class="flex flex-wrap gap-3 mb-12 reveal-up">
-                    <button class="filter-btn active" data-year="all">ALL</button>
-                    <button class="filter-btn" data-year="2025">2025</button>
-                    <button class="filter-btn" data-year="2024">2024</button>
-                    <button class="filter-btn" data-year="2023">2023</button>
-                    <button class="filter-btn" data-year="2022">2022</button>
-                    <button class="filter-btn" data-year="2021">2021</button>
-                    <button class="filter-btn" data-year="2018-2020">2018-2020</button>
-                </div>
-
-                <div class="publications-list space-y-6">
-                    <!-- 2025 Publications -->
-                    <div class="publication-item bg-white border-4 border-black p-6 shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] hover:shadow-[10px_10px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300" data-year="2025">
-                        <div class="flex flex-col md:flex-row gap-4">
-                            <div class="bg-neo-yellow border-4 border-black px-4 py-2 font-black text-xl h-fit shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">2025</div>
-                            <div class="flex-1">
-                                <h3 class="text-xl font-black mb-2">Computational Design of Potentially Multifunctional Antimicrobial Peptide Candidates via a Hybrid Generative Model</h3>
-                                <p class="font-mono text-sm mb-2">Ying, F.; Go, W.; Li, Z.; Ouyang, C.; Phaphuangwittayakul, A.; Dhuny, R.</p>
-                                <p class="text-sm font-bold mb-3">International Journal of Molecular Sciences</p>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="neo-tag-small bg-neo-purple">Generative Models</span>
-                                    <span class="neo-tag-small bg-neo-green">Antimicrobial Peptides</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2025">
-                        <div class="pub-year">2025</div>
-                        <div class="pub-content">
-                            <h3>Identifying Hubs Through Influential Nodes in Transportation Network by Using a Gravity Centrality Approach</h3>
-                            <p class="authors">Tepsan W.; Phaphuangwittayakul A.; Sokantika S.; Harnpornchai N.</p>
-                            <p class="venue">Algorithms</p>
-                            <div class="pub-tags">
-                                <span class="tag">Complex Network</span>
-                                <span class="tag">Transportation Systems</span>
-                                <span class="tag">Gravity Centrality</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2025">
-                        <div class="pub-year">2025</div>
-                        <div class="pub-content">
-                            <h3>Enhancing Multimodal Video Summarization via Temporal and Semantic Alignment</h3>
-                            <p class="authors">Ying F.; Luo Z.; Phaphuangwittayakul A.</p>
-                            <p class="venue">International Conference on Neural Information Processing</p>
-                            <div class="pub-tags">
-                                <span class="tag">Computer Vision</span>
-                                <span class="tag">Video Summarization</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 2024 Publications -->
-                    <div class="publication-item" data-year="2024">
-                        <div class="pub-year">2024</div>
-                        <div class="pub-content">
-                            <h3>RailTrack-DaViT: A Vision Transformer-Based Approach for Automated Railway Track Defect Detection</h3>
-                            <p class="authors">Phaphuangwittayakul A.; Harnpornchai N.; Ying F.; Zhang J.</p>
-                            <p class="venue">Journal of Imaging</p>
-                            <div class="pub-tags">
-                                <span class="tag">Computer Vision</span>
-                                <span class="tag">Transformers</span>
-                                <span class="tag">Railway Systems</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2024">
-                        <div class="pub-year">2024</div>
-                        <div class="pub-content">
-                            <h3>Augmented Reality-Enabled IoT Devices for Wireless Communication</h3>
-                            <p class="authors">Ramasamy S.S.; Chokkanathan K.; Phaphuangwittayakul A.; Vijayalakshmi S.</p>
-                            <p class="venue">Bio-Inspired Computational Paradigms: Security and Privacy in Dynamic Smart Networks</p>
-                            <div class="pub-tags">
-                                <span class="tag">AR/VR</span>
-                                <span class="tag">IoT</span>
-                                <span class="tag">Wireless Communication</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 2023 Publications -->
-                    <div class="publication-item" data-year="2023">
-                        <div class="pub-year">2023</div>
-                        <div class="pub-content">
-                            <h3>Few-shot image generation based on contrastive meta-learning generative adversarial network</h3>
-                            <p class="authors">Phaphuangwittayakul A.; Ying F.; Guo Y.; Zhou L.; Chakpitak N.</p>
-                            <p class="venue">Visual Computer</p>
-                            <div class="pub-tags">
-                                <span class="tag">Few-Shot Learning</span>
-                                <span class="tag">GANs</span>
-                                <span class="tag">Meta-Learning</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2023">
-                        <div class="pub-year">2023</div>
-                        <div class="pub-content">
-                            <h3>Adaptive adversarial prototyping network for few-shot prototypical translation</h3>
-                            <p class="authors">Phaphuangwittayakul A.; Ying F.; Guo Y.; Guohui; Santisookrat S.</p>
-                            <p class="venue">Journal of Visual Communication and Image Representation</p>
-                            <div class="pub-tags">
-                                <span class="tag">Few-Shot Learning</span>
-                                <span class="tag">Prototypical Networks</span>
-                                <span class="tag">Translation</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 2022 Publications -->
-                    <div class="publication-item" data-year="2022">
-                        <div class="pub-year">2022</div>
-                        <div class="pub-content">
-                            <h3>An optimal deep learning framework for multi-type hemorrhagic lesions detection and quantification in head CT images for traumatic brain injury</h3>
-                            <p class="authors">Phaphuangwittayakul A.; Guo Y.; Ying F.; Dawod A.Y.; Angkurawaranon S.; Angkurawaranon C.</p>
-                            <p class="venue">Applied Intelligence</p>
-                            <div class="pub-tags">
-                                <span class="tag">Deep Learning</span>
-                                <span class="tag">Medical Imaging</span>
-                                <span class="tag">Computer Vision</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2022">
-                        <div class="pub-year">2022</div>
-                        <div class="pub-content">
-                            <h3>Fast Adaptive Meta-Learning for Few-Shot Image Generation</h3>
-                            <p class="authors">Phaphuangwittayakul A.; Guo Y.; Ying F.</p>
-                            <p class="venue">IEEE Transactions on Multimedia</p>
-                            <div class="pub-tags">
-                                <span class="tag">Meta-Learning</span>
-                                <span class="tag">Few-Shot Learning</span>
-                                <span class="tag">Image Generation</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2022">
-                        <div class="pub-year">2022</div>
-                        <div class="pub-content">
-                            <h3>A hybrid method for traumatic brain injury lesion segmentation</h3>
-                            <p class="authors">Dawod A.Y.; Phaphuangwittayakul A.; Angkurawaranon S.</p>
-                            <p class="venue">International Journal of Electrical and Computer Engineering</p>
-                            <div class="pub-tags">
-                                <span class="tag">Medical Imaging</span>
-                                <span class="tag">Segmentation</span>
-                                <span class="tag">Brain Injury</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 2021 Publications -->
-                    <div class="publication-item" data-year="2021">
-                        <div class="pub-year">2021</div>
-                        <div class="pub-content">
-                            <h3>SELF-ATTENTION RECURRENT SUMMARIZATION NETWORK WITH REINFORCEMENT LEARNING FOR VIDEO SUMMARIZATION TASK</h3>
-                            <p class="authors">Phaphuangwittayakul A.; Guo Y.; Ying F.; Xu W.; Zheng Z.</p>
-                            <p class="venue">Proceedings - IEEE International Conference on Multimedia and Expo</p>
-                            <div class="pub-tags">
-                                <span class="tag">Video Summarization</span>
-                                <span class="tag">Reinforcement Learning</span>
-                                <span class="tag">Self-Attention</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2021">
-                        <div class="pub-year">2021</div>
-                        <div class="pub-content">
-                            <h3>Adaptive slices in brain haemorrhage segmentation based on the slic algorithm</h3>
-                            <p class="authors">Dawod A.Y.; Phaphuangwittayakul A.; Ying F.; Angkurawaranon S.</p>
-                            <p class="venue">Engineering Letters</p>
-                            <div class="pub-tags">
-                                <span class="tag">Medical Imaging</span>
-                                <span class="tag">Segmentation</span>
-                                <span class="tag">SLIC Algorithm</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2021">
-                        <div class="pub-year">2021</div>
-                        <div class="pub-content">
-                            <h3>Adaptive Image Segmentation for Traumatic Brain Haemorrhage</h3>
-                            <p class="authors">Dawod A.Y.; Phaphuangwittayakul A.</p>
-                            <p class="venue">TEM Journal</p>
-                            <div class="pub-tags">
-                                <span class="tag">Medical Imaging</span>
-                                <span class="tag">Segmentation</span>
-                                <span class="tag">Brain Hemorrhage</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2021">
-                        <div class="pub-year">2021</div>
-                        <div class="pub-content">
-                            <h3>Preliminary study and implementation of chiang mai tourism platform based on dosa</h3>
-                            <p class="authors">Panpeng V.; Fang M.; Phaphuangwittayakul A.; Rattanadamrongaksorn T.</p>
-                            <p class="venue">Advances in Intelligent Systems and Computing</p>
-                            <div class="pub-tags">
-                                <span class="tag">Tourism Platform</span>
-                                <span class="tag">DOSA</span>
-                                <span class="tag">Smart Tourism</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 2020 Publications -->
-                    <div class="publication-item" data-year="2018-2020">
-                        <div class="pub-year">2020</div>
-                        <div class="pub-content">
-                            <h3>Extracting Skeleton of the Global Terrorism Network Based on m-Modified Topology Potential</h3>
-                            <p class="authors">Wang S.; Malang K.; Yuan H.; Phaphuangwittayakul A.; Lv Y.; Lowdermilk M.D.; Geng J.</p>
-                            <p class="venue">Complexity</p>
-                            <div class="pub-tags">
-                                <span class="tag">Complex Networks</span>
-                                <span class="tag">Topology</span>
-                                <span class="tag">Network Analysis</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2018-2020">
-                        <div class="pub-year">2020</div>
-                        <div class="pub-content">
-                            <h3>Identifying influential nodes of global terrorism network: A comparison for skeleton network extraction</h3>
-                            <p class="authors">Malang K.; Wang S.; Phaphuangwittayakul A.; Lv Y.; Yuan H.; Zhang X.</p>
-                            <p class="venue">Physica A: Statistical Mechanics and its Applications</p>
-                            <div class="pub-tags">
-                                <span class="tag">Complex Networks</span>
-                                <span class="tag">Network Analysis</span>
-                                <span class="tag">Influential Nodes</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2018-2020">
-                        <div class="pub-year">2020</div>
-                        <div class="pub-content">
-                            <h3>Skeleton network extraction and analysis on bicycle sharing networks</h3>
-                            <p class="authors">Malang K.; Wang S.; Lv Y.; Phaphuangwittayakul A.</p>
-                            <p class="venue">International Journal of Data Warehousing and Mining</p>
-                            <div class="pub-tags">
-                                <span class="tag">Network Analysis</span>
-                                <span class="tag">Bicycle Sharing</span>
-                                <span class="tag">Data Mining</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 2018-2019 Publications -->
-                    <div class="publication-item" data-year="2018-2020">
-                        <div class="pub-year">2019</div>
-                        <div class="pub-content">
-                            <h3>Smart farming in Thailand</h3>
-                            <p class="authors">Tiammee S.; Wongyai J.; Udomwong P.; Phaphuangwittayakul A.; Saenchan L.; Chanaim S.</p>
-                            <p class="venue">2019 13th International Conference on Software, Knowledge, Information Management and Applications, SKIMA 2019</p>
-                            <div class="pub-tags">
-                                <span class="tag">Smart Farming</span>
-                                <span class="tag">Agriculture</span>
-                                <span class="tag">IoT</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2018-2020">
-                        <div class="pub-year">2018</div>
-                        <div class="pub-content">
-                            <h3>Analysis of Skill Demand in Thai Labor Market from Online Jobs Recruitments Websites</h3>
-                            <p class="authors">Phaphuangwittayakul A.; Saranwong S.; Panyakaew S.-N.; Inkeaw P.; Chaijaruwanich J.</p>
-                            <p class="venue">Proceeding of 2018 15th International Joint Conference on Computer Science and Software Engineering, JCSSE 2018</p>
-                            <div class="pub-tags">
-                                <span class="tag">Labor Market Analysis</span>
-                                <span class="tag">Data Mining</span>
-                                <span class="tag">Job Market</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="publication-item" data-year="2018-2020">
-                        <div class="pub-year">2018</div>
-                        <div class="pub-content">
-                            <h3>From complex network to skeleton: Mj-Modified topology potential for node importance identification</h3>
-                            <p class="authors">Yuan H.; Malang K.; Lv Y.; Phaphuangwittayakul A.</p>
-                            <p class="venue">Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)</p>
-                            <div class="pub-tags">
-                                <span class="tag">Complex Networks</span>
-                                <span class="tag">Topology</span>
-                                <span class="tag">Node Importance</span>
-                            </div>
+            <!-- Publications List -->
+            <div class="publications-list">
+                <!-- 2026 -->
+                <div class="pub-item" data-year="2026" data-animate>
+                    <div class="pub-year-badge">2026</div>
+                    <div class="pub-details">
+                        <h3>Understanding cross-cultural destination perceptions through key attraction factors: a dynamic analysis of Chinese tourist experiences in Thailand</h3>
+                        <p class="pub-authors">Phaphuangwittayakul, A.; Ramasamy, SS.; Ying, F.; Chakpitak, N.</p>
+                        <p class="pub-venue">Tourism Recreation Research</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Tourism</span>
+                            <span class="pub-tag">Cross-cultural</span>
                         </div>
                     </div>
                 </div>
-            </section>
-
-        <!-- Teaching -->
-        <section id="teaching" class="min-h-screen py-20 px-4 md:px-8 bg-neo-green relative overflow-hidden">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-6xl md:text-8xl font-black mb-16 reveal-up">
-                    <span class="inline-block border-8 border-black bg-black text-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(255,229,0,1)] rotate-1">TEACHING</span>
-                </h2>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
-                        <div class="bg-neo-yellow border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-3">888102</div>
-                        <h3 class="text-2xl font-black mb-3">BIG DATA FOR BUSINESS</h3>
-                        <p class="font-mono text-sm">Advanced analytics and data science applications in business contexts</p>
-                    </div>
-                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
-                        <div class="bg-neo-blue border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-2">888251</div>
-                        <h3 class="text-2xl font-black mb-3">DIGITAL PLATFORMS</h3>
-                        <p class="font-mono text-sm">Modern digital platform architectures and development</p>
-                    </div>
-                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
-                        <div class="bg-neo-pink border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-2">888311</div>
-                        <h3 class="text-2xl font-black mb-3">DIGITAL BUSINESS ECOSYSTEM</h3>
-                        <p class="font-mono text-sm">Understanding digital transformation and business ecosystems</p>
-                    </div>
-                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
-                        <div class="bg-neo-purple border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] rotate-3">888343</div>
-                        <h3 class="text-2xl font-black mb-3">APP DEV FOR DIGITAL STARTUP</h3>
-                        <p class="font-mono text-sm">Low-code and no-code platforms for rapid application development</p>
-                    </div>
-                    <div class="bg-white border-4 border-black p-6 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:-translate-y-1 transition-all duration-300 reveal-up">
-                        <div class="bg-neo-orange border-4 border-black px-6 py-3 inline-block mb-4 font-mono font-black text-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] -rotate-1">888351</div>
-                        <h3 class="text-2xl font-black mb-3">MODERN COMPUTER VISION</h3>
-                        <p class="font-mono text-sm">Advanced computer vision techniques for entrepreneurs</p>
+                
+                <!-- 2025 -->
+                <div class="pub-item" data-year="2025" data-animate>
+                    <div class="pub-year-badge">2025</div>
+                    <div class="pub-details">
+                        <h3>Computational Design of Potentially Multifunctional Antimicrobial Peptide Candidates via a Hybrid Generative Model</h3>
+                        <p class="pub-authors">Ying, F.; Go, W.; Li, Z.; Ouyang, C.; Phaphuangwittayakul, A.; Dhuny, R.</p>
+                        <p class="pub-venue">International Journal of Molecular Sciences</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Generative Models</span>
+                            <span class="pub-tag">Antimicrobial Peptides</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- AI Demos Section -->
-        <section id="ai-demos" class="min-h-screen py-20 px-4 md:px-8 bg-neo-blue relative overflow-hidden">
-            <div class="max-w-7xl mx-auto">
-                <h2 class="text-6xl md:text-8xl font-black mb-16 reveal-up">
-                    <span class="inline-block border-8 border-black bg-white px-8 py-4 shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] -rotate-2">AI DEMOS</span>
-                </h2>
-
-                <div class="space-y-8">
-                    <!-- Computer Vision Demo -->
-                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] reveal-up">
-                        <h3 class="text-3xl font-black mb-6 flex items-center gap-3">
-                            <span class="bg-neo-pink border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                <i class="fas fa-eye text-white"></i>
-                            </span>
-                            COMPUTER VISION DEMO
-                        </h3>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <input type="file" id="imageInput" accept="image/*" class="hidden">
-                                <div class="border-4 border-dashed border-black p-12 text-center cursor-pointer hover:bg-neo-yellow transition-colors duration-300" onclick="document.getElementById('imageInput').click()">
-                                    <i class="fas fa-cloud-upload-alt text-6xl mb-4"></i>
-                                    <p class="font-bold">CLICK TO UPLOAD IMAGE</p>
-                                </div>
-                                <canvas id="imageCanvas" class="hidden w-full border-4 border-black mt-4"></canvas>
-                            </div>
-                            <div class="bg-black border-4 border-black p-6 text-white">
-                                <h4 class="font-black text-xl mb-4 text-neo-yellow">ANALYSIS RESULTS</h4>
-                                <div id="analysisOutput" class="font-mono text-sm">
-                                    <p>Upload an image to see AI analysis results</p>
-                                </div>
-                            </div>
+                <div class="pub-item" data-year="2025" data-animate>
+                    <div class="pub-year-badge">2025</div>
+                    <div class="pub-details">
+                        <h3>Identifying Hubs Through Influential Nodes in Transportation Network by Using a Gravity Centrality Approach</h3>
+                        <p class="pub-authors">Tepsan W.; Phaphuangwittayakul A.; Sokantika S.; Harnpornchai N.</p>
+                        <p class="pub-venue">Algorithms</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Complex Network</span>
+                            <span class="pub-tag">Transportation Systems</span>
+                            <span class="pub-tag">Gravity Centrality</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Text Generation Demo -->
-                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] reveal-up">
-                        <h3 class="text-3xl font-black mb-6 flex items-center gap-3">
-                            <span class="bg-neo-purple border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                <i class="fas fa-brain text-white"></i>
-                            </span>
-                            AI TEXT GENERATION
-                        </h3>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <textarea id="promptInput" class="w-full h-40 border-4 border-black p-4 font-mono text-sm focus:outline-none focus:ring-4 focus:ring-neo-yellow" placeholder="Enter a research topic or question..."></textarea>
-                                <button id="generateText" class="neo-button bg-neo-purple mt-4">GENERATE AI RESPONSE</button>
-                            </div>
-                            <div class="bg-black border-4 border-black p-6 text-white">
-                                <h4 class="font-black text-xl mb-4 text-neo-green">GENERATED RESPONSE</h4>
-                                <div id="textOutput" class="font-mono text-sm">
-                                    <p>Enter a prompt to see AI-generated academic content</p>
-                                </div>
-                            </div>
+                <div class="pub-item" data-year="2025" data-animate>
+                    <div class="pub-year-badge">2025</div>
+                    <div class="pub-details">
+                        <h3>Enhancing Multimodal Video Summarization via Temporal and Semantic Alignment</h3>
+                        <p class="pub-authors">Ying F.; Luo Z.; Phaphuangwittayakul A.</p>
+                        <p class="pub-venue">International Conference on Neural Information Processing</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Computer Vision</span>
+                            <span class="pub-tag">Video Summarization</span>
                         </div>
                     </div>
+                </div>
 
-                    <!-- Research Paper Similarity -->
-                    <div class="bg-white border-4 border-black p-8 shadow-[8px_8px_0px_0px_rgba(0,0,0,1)] reveal-up">
-                        <h3 class="text-3xl font-black mb-6 flex items-center gap-3">
-                            <span class="bg-neo-green border-4 border-black p-3 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)]">
-                                <i class="fas fa-search text-black"></i>
-                            </span>
-                            RESEARCH PAPER SIMILARITY
-                        </h3>
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <input type="text" id="paperTitle" class="w-full border-4 border-black p-4 font-mono text-sm focus:outline-none focus:ring-4 focus:ring-neo-green" placeholder="Enter paper title...">
-                                <button id="findSimilar" class="neo-button bg-neo-green mt-4">FIND SIMILAR PAPERS</button>
-                            </div>
-                            <div class="bg-black border-4 border-black p-6 text-white">
-                                <h4 class="font-black text-xl mb-4 text-neo-blue">SIMILAR PAPERS</h4>
-                                <div id="similarityOutput" class="font-mono text-sm">
-                                    <p>Enter a paper title to find related research</p>
-                                </div>
-                            </div>
+                <!-- 2024 -->
+                <div class="pub-item" data-year="2024" data-animate>
+                    <div class="pub-year-badge">2024</div>
+                    <div class="pub-details">
+                        <h3>RailTrack-DaViT: A Vision Transformer-Based Approach for Automated Railway Track Defect Detection</h3>
+                        <p class="pub-authors">Phaphuangwittayakul A.; Harnpornchai N.; Ying F.; Zhang J.</p>
+                        <p class="pub-venue">Journal of Imaging</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Computer Vision</span>
+                            <span class="pub-tag">Transformers</span>
+                            <span class="pub-tag">Railway Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2024" data-animate>
+                    <div class="pub-year-badge">2024</div>
+                    <div class="pub-details">
+                        <h3>Augmented Reality-Enabled IoT Devices for Wireless Communication</h3>
+                        <p class="pub-authors">Ramasamy S.S.; Chokkanathan K.; Phaphuangwittayakul A.; Vijayalakshmi S.</p>
+                        <p class="pub-venue">Bio-Inspired Computational Paradigms: Security and Privacy in Dynamic Smart Networks</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">AR/VR</span>
+                            <span class="pub-tag">IoT</span>
+                            <span class="pub-tag">Wireless Communication</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2023 -->
+                <div class="pub-item" data-year="2023" data-animate>
+                    <div class="pub-year-badge">2023</div>
+                    <div class="pub-details">
+                        <h3>Few-shot image generation based on contrastive meta-learning generative adversarial network</h3>
+                        <p class="pub-authors">Phaphuangwittayakul A.; Ying F.; Guo Y.; Zhou L.; Chakpitak N.</p>
+                        <p class="pub-venue">Visual Computer</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Few-Shot Learning</span>
+                            <span class="pub-tag">GANs</span>
+                            <span class="pub-tag">Meta-Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2023" data-animate>
+                    <div class="pub-year-badge">2023</div>
+                    <div class="pub-details">
+                        <h3>Adaptive adversarial prototyping network for few-shot prototypical translation</h3>
+                        <p class="pub-authors">Phaphuangwittayakul A.; Ying F.; Guo Y.; Guohui; Santisookrat S.</p>
+                        <p class="pub-venue">Journal of Visual Communication and Image Representation</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Few-Shot Learning</span>
+                            <span class="pub-tag">Prototypical Networks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2022 -->
+                <div class="pub-item" data-year="2022" data-animate>
+                    <div class="pub-year-badge">2022</div>
+                    <div class="pub-details">
+                        <h3>An optimal deep learning framework for multi-type hemorrhagic lesions detection and quantification in head CT images for traumatic brain injury</h3>
+                        <p class="pub-authors">Phaphuangwittayakul A.; Guo Y.; Ying F.; Dawod A.Y.; Angkurawaranon S.; Angkurawaranon C.</p>
+                        <p class="pub-venue">Applied Intelligence</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Deep Learning</span>
+                            <span class="pub-tag">Medical Imaging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2022" data-animate>
+                    <div class="pub-year-badge">2022</div>
+                    <div class="pub-details">
+                        <h3>Fast Adaptive Meta-Learning for Few-Shot Image Generation</h3>
+                        <p class="pub-authors">Phaphuangwittayakul A.; Guo Y.; Ying F.</p>
+                        <p class="pub-venue">IEEE Transactions on Multimedia</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Meta-Learning</span>
+                            <span class="pub-tag">Few-Shot Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2022" data-animate>
+                    <div class="pub-year-badge">2022</div>
+                    <div class="pub-details">
+                        <h3>A hybrid method for traumatic brain injury lesion segmentation</h3>
+                        <p class="pub-authors">Dawod A.Y.; Phaphuangwittayakul A.; Angkurawaranon S.</p>
+                        <p class="pub-venue">International Journal of Electrical and Computer Engineering</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Medical Imaging</span>
+                            <span class="pub-tag">Segmentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2021 -->
+                <div class="pub-item" data-year="2021" data-animate>
+                    <div class="pub-year-badge">2021</div>
+                    <div class="pub-details">
+                        <h3>Self-Attention Recurrent Summarization Network with Reinforcement Learning for Video Summarization Task</h3>
+                        <p class="pub-authors">Phaphuangwittayakul A.; Guo Y.; Ying F.; Xu W.; Zheng Z.</p>
+                        <p class="pub-venue">Proceedings — IEEE International Conference on Multimedia and Expo</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Video Summarization</span>
+                            <span class="pub-tag">Reinforcement Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2021" data-animate>
+                    <div class="pub-year-badge">2021</div>
+                    <div class="pub-details">
+                        <h3>Adaptive slices in brain haemorrhage segmentation based on the SLIC algorithm</h3>
+                        <p class="pub-authors">Dawod A.Y.; Phaphuangwittayakul A.; Ying F.; Angkurawaranon S.</p>
+                        <p class="pub-venue">Engineering Letters</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Medical Imaging</span>
+                            <span class="pub-tag">Segmentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2021" data-animate>
+                    <div class="pub-year-badge">2021</div>
+                    <div class="pub-details">
+                        <h3>Adaptive Image Segmentation for Traumatic Brain Haemorrhage</h3>
+                        <p class="pub-authors">Dawod A.Y.; Phaphuangwittayakul A.</p>
+                        <p class="pub-venue">TEM Journal</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Medical Imaging</span>
+                            <span class="pub-tag">Brain Hemorrhage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2021" data-animate>
+                    <div class="pub-year-badge">2021</div>
+                    <div class="pub-details">
+                        <h3>Preliminary study and implementation of Chiang Mai tourism platform based on DOSA</h3>
+                        <p class="pub-authors">Panpeng V.; Fang M.; Phaphuangwittayakul A.; Rattanadamrongaksorn T.</p>
+                        <p class="pub-venue">Advances in Intelligent Systems and Computing</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Tourism Platform</span>
+                            <span class="pub-tag">Smart Tourism</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2018-2020 -->
+                <div class="pub-item" data-year="2018-2020" data-animate>
+                    <div class="pub-year-badge">2020</div>
+                    <div class="pub-details">
+                        <h3>Extracting Skeleton of the Global Terrorism Network Based on m-Modified Topology Potential</h3>
+                        <p class="pub-authors">Wang S.; Malang K.; Yuan H.; Phaphuangwittayakul A.; Lv Y.; Lowdermilk M.D.; Geng J.</p>
+                        <p class="pub-venue">Complexity</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Complex Networks</span>
+                            <span class="pub-tag">Topology</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2018-2020" data-animate>
+                    <div class="pub-year-badge">2020</div>
+                    <div class="pub-details">
+                        <h3>Identifying influential nodes of global terrorism network: A comparison for skeleton network extraction</h3>
+                        <p class="pub-authors">Malang K.; Wang S.; Phaphuangwittayakul A.; Lv Y.; Yuan H.; Zhang X.</p>
+                        <p class="pub-venue">Physica A: Statistical Mechanics and its Applications</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Complex Networks</span>
+                            <span class="pub-tag">Network Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2018-2020" data-animate>
+                    <div class="pub-year-badge">2020</div>
+                    <div class="pub-details">
+                        <h3>Skeleton network extraction and analysis on bicycle sharing networks</h3>
+                        <p class="pub-authors">Malang K.; Wang S.; Lv Y.; Phaphuangwittayakul A.</p>
+                        <p class="pub-venue">International Journal of Data Warehousing and Mining</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Network Analysis</span>
+                            <span class="pub-tag">Data Mining</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2018-2020" data-animate>
+                    <div class="pub-year-badge">2019</div>
+                    <div class="pub-details">
+                        <h3>Smart farming in Thailand</h3>
+                        <p class="pub-authors">Tiammee S.; Wongyai J.; Udomwong P.; Phaphuangwittayakul A.; Saenchan L.; Chanaim S.</p>
+                        <p class="pub-venue">13th International Conference on Software, Knowledge, Information Management and Applications (SKIMA 2019)</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Smart Farming</span>
+                            <span class="pub-tag">IoT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2018-2020" data-animate>
+                    <div class="pub-year-badge">2018</div>
+                    <div class="pub-details">
+                        <h3>Analysis of Skill Demand in Thai Labor Market from Online Jobs Recruitments Websites</h3>
+                        <p class="pub-authors">Phaphuangwittayakul A.; Saranwong S.; Panyakaew S.-N.; Inkeaw P.; Chaijaruwanich J.</p>
+                        <p class="pub-venue">Proceeding of 2018 15th International Joint Conference on Computer Science and Software Engineering (JCSSE 2018)</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Data Mining</span>
+                            <span class="pub-tag">Labor Market</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2018-2020" data-animate>
+                    <div class="pub-year-badge">2018</div>
+                    <div class="pub-details">
+                        <h3>From complex network to skeleton: Mj-Modified topology potential for node importance identification</h3>
+                        <p class="pub-authors">Yuan H.; Malang K.; Lv Y.; Phaphuangwittayakul A.</p>
+                        <p class="pub-venue">Lecture Notes in Computer Science</p>
+                        <div class="pub-tags">
+                            <span class="pub-tag">Complex Networks</span>
+                            <span class="pub-tag">Node Importance</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
+
+    <!-- Teaching Section -->
+    <section id="teaching" class="section">
+        <div class="section-header">
+            <div class="section-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+            <div>
+                <h2 class="section-title">Teaching</h2>
+                <p class="section-subtitle">Courses at International College of Digital Innovation, Chiang Mai University</p>
+                <div class="section-divider"></div>
+            </div>
+        </div>
+
+        <div class="courses-grid stagger-children" data-animate>
+            <div class="course-card">
+                <div class="course-code">888102</div>
+                <h3>Big Data for Business</h3>
+                <p>Advanced analytics and data science applications in business contexts, covering data pipelines, visualization, and decision-making.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-code">888251</div>
+                <h3>Digital Platforms</h3>
+                <p>Modern digital platform architectures, development methodologies, and ecosystem strategies for the digital economy.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-code">888311</div>
+                <h3>Digital Business Ecosystem</h3>
+                <p>Understanding digital transformation, platform economics, and building sustainable digital business ecosystems.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-code">888343</div>
+                <h3>App Development for Digital Startup</h3>
+                <p>Rapid application development using modern tools and frameworks, from prototyping to deployment for startup ventures.</p>
+            </div>
+
+            <div class="course-card">
+                <div class="course-code">888351</div>
+                <h3>Modern Computer Vision</h3>
+                <p>Advanced computer vision techniques including CNNs, transformers, object detection, and practical applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Demos Section -->
+    <div class="section-alt">
+        <section id="demos" class="section">
+            <div class="section-header">
+                <div class="section-icon"><i class="fas fa-robot"></i></div>
+                <div>
+                    <h2 class="section-title">Interactive AI Demos</h2>
+                    <p class="section-subtitle">Explore simplified demonstrations of AI research concepts</p>
+                    <div class="section-divider"></div>
+                </div>
+            </div>
+
+            <div class="demos-grid">
+                <!-- Computer Vision Demo -->
+                <div class="demo-card" data-animate>
+                    <div class="demo-header">
+                        <div class="demo-icon"><i class="fas fa-eye"></i></div>
+                        <div>
+                            <h3>Computer Vision Analysis</h3>
+                            <p class="section-subtitle" style="margin-top:0">Upload an image for simulated AI analysis</p>
+                        </div>
+                    </div>
+                    <div class="demo-content">
+                        <div class="demo-input-area">
+                            <input type="file" id="imageInput" accept="image/*" class="hidden" style="display:none">
+                            <div class="demo-upload" onclick="document.getElementById('imageInput').click()">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <p>Click to upload an image</p>
+                            </div>
+                            <canvas id="imageCanvas"></canvas>
+                        </div>
+                        <div class="demo-output">
+                            <h4>Analysis Results</h4>
+                            <div id="analysisOutput">
+                                <p>Upload an image to begin analysis.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Generation Demo -->
+                <div class="demo-card" data-animate>
+                    <div class="demo-header">
+                        <div class="demo-icon"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h3>AI Text Generation</h3>
+                            <p class="section-subtitle" style="margin-top:0">Generate academic-style AI responses</p>
+                        </div>
+                    </div>
+                    <div class="demo-content">
+                        <div class="demo-input-area">
+                            <textarea id="promptInput" class="demo-textarea" placeholder="Enter a research topic or question, e.g. 'computer vision'..."></textarea>
+                            <button id="generateText" class="demo-btn"><i class="fas fa-wand-magic-sparkles"></i> Generate Response</button>
+                        </div>
+                        <div class="demo-output">
+                            <h4>Generated Response</h4>
+                            <div id="textOutput">
+                                <p>Enter a prompt to generate AI-assisted content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Paper Similarity Demo -->
+                <div class="demo-card" data-animate>
+                    <div class="demo-header">
+                        <div class="demo-icon"><i class="fas fa-book-open"></i></div>
+                        <div>
+                            <h3>Research Paper Similarity</h3>
+                            <p class="section-subtitle" style="margin-top:0">Find related papers using simulated embeddings</p>
+                        </div>
+                    </div>
+                    <div class="demo-content">
+                        <div class="demo-input-area">
+                            <input type="text" id="paperTitle" class="demo-text-input" placeholder="Enter a paper title...">
+                            <button id="findSimilar" class="demo-btn"><i class="fas fa-search"></i> Find Similar Papers</button>
+                        </div>
+                        <div class="demo-output">
+                            <h4>Similar Papers</h4>
+                            <div id="similarityOutput">
+                                <p>Enter a paper title to discover related work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
-    <footer class="bg-black text-white py-12 px-4 md:px-8 border-t-8 border-neo-yellow">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="font-black text-2xl mb-4">ANIWAT PHAPHUANGWITTAYAKUL</p>
-            <p class="font-mono text-sm">© 2025 All Rights Reserved</p>
+    <footer class="footer">
+        <div class="footer-inner">
+            <p class="footer-name">Dr. Aniwat Phaphuangwittayakul</p>
+            <p class="footer-title">Lecturer &amp; AI Researcher — Chiang Mai University</p>
+            <div class="footer-links">
+                <a href="mailto:aniwat.p@cmu.ac.th" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=d06KlYQAAAAJ&hl=en" title="Google Scholar" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://github.com/phaphuang" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="footer-copy">&copy; 2025 Aniwat Phaphuangwittayakul. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="neo-script.js"></script>
+    <script src="prof-script.js"></script>
 </body>
 </html>
